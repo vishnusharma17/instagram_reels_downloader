@@ -9,33 +9,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px; /* 👈 left & right 10px gap */
+  padding: 10px; /* left-right 10px */
 }
 
 /* Card */
 .card {
   background: white;
   width: 100%;
-  max-width: 420px; /* 👈 width increase */
-  padding: 30px;    /* 👈 height feel increase */
-  border-radius: 16px;
+  max-width: calc(100vw - 20px); /* exact 10px gap */
+  min-height: 80vh;              /* REAL height */
+  padding: 36px;                 /* height feel */
+  border-radius: 18px;
   text-align: center;
-  box-shadow: 0 12px 30px rgba(0,0,0,.25);
+  box-shadow: 0 14px 35px rgba(0,0,0,.3);
 }
 
 /* Input */
 input {
   width: 100%;
-  padding: 16px; /* bigger input */
-  margin: 16px 0;
-  border-radius: 12px;
+  padding: 18px;
+  margin: 20px 0;
+  border-radius: 14px;
   border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-input:focus {
-  outline: none;
-  border-color: #fd1d1d;
+  font-size: 17px;
 }
 
 /* Button */
@@ -43,45 +39,40 @@ button {
   background: #fd1d1d;
   color: white;
   border: none;
-  padding: 16px; /* bigger button */
+  padding: 18px;
   width: 100%;
-  border-radius: 12px;
+  border-radius: 14px;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
-  transition: background 0.2s ease;
-}
-
-button:hover {
-  background: #e01414;
 }
 
 /* Error */
 .error {
   color: #d00000;
-  margin-top: 14px;
-  font-size: 14px;
+  margin-top: 16px;
+  font-size: 15px;
 }
 
 /* Note */
 .note {
-  font-size: 14px;
+  font-size: 15px;
   color: #555;
-  margin-top: 18px;
+  margin-top: 22px;
 }
 
-/* 📱 Mobile fine tuning */
+/* 📱 Mobile only */
 @media (max-width: 480px) {
   .card {
-     max-width: 850px; /* 👈 left-right 10px gap confirm */
+    min-height: 85vh;   /* almost full screen */
     padding: 38px;
   }
-  
 }
 
 /* 🖥 Desktop */
 @media (min-width: 768px) {
   .card {
-    max-width: 460px;
+    max-width: 500px;
+    min-height: auto;
   }
 }
