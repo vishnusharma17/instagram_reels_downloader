@@ -29,6 +29,13 @@ def index():
         return send_file(filepath, as_attachment=True)
 
     return render_template("index.html")
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
+
+    
+
+
+# python3 -m venv venv
+# source venv/bin/activate
+# pip install -r requirements.txt
+# python app.py
