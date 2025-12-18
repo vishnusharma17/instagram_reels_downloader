@@ -73,9 +73,10 @@ button:hover {
 /* 📱 Mobile fine tuning */
 @media (max-width: 480px) {
   .card {
-    max-width: calc(100vw - 20px); /* 👈 left-right 10px gap confirm */
-    padding: 28px;
+     max-width: 850px; /* 👈 left-right 10px gap confirm */
+    padding: 38px;
   }
+  
 }
 
 /* 🖥 Desktop */
