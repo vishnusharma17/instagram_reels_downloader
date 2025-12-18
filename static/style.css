@@ -9,28 +9,28 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px; /* mobile spacing */
+  padding: 10px; /* 👈 left & right 10px gap */
 }
 
 /* Card */
 .card {
   background: white;
-  padding: 28px;
-  border-radius: 14px;
   width: 100%;
-  max-width: 380px; /* responsive width */
+  max-width: 420px; /* 👈 width increase */
+  padding: 30px;    /* 👈 height feel increase */
+  border-radius: 16px;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,.2);
+  box-shadow: 0 12px 30px rgba(0,0,0,.25);
 }
 
 /* Input */
 input {
   width: 100%;
-  padding: 14px;
-  margin: 14px 0;
-  border-radius: 10px;
+  padding: 16px; /* bigger input */
+  margin: 16px 0;
+  border-radius: 12px;
   border: 1px solid #ccc;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 input:focus {
@@ -43,11 +43,11 @@ button {
   background: #fd1d1d;
   color: white;
   border: none;
-  padding: 14px;
+  padding: 16px; /* bigger button */
   width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
   transition: background 0.2s ease;
 }
@@ -59,34 +59,28 @@ button:hover {
 /* Error */
 .error {
   color: #d00000;
-  margin-top: 12px;
+  margin-top: 14px;
   font-size: 14px;
 }
 
 /* Note */
 .note {
-  font-size: 13px;
+  font-size: 14px;
   color: #555;
-  margin-top: 16px;
+  margin-top: 18px;
 }
 
-/* 📱 Mobile specific */
+/* 📱 Mobile fine tuning */
 @media (max-width: 480px) {
   .card {
-    padding: 22px;
-    border-radius: 12px;
-  }
-
-  input,
-  button {
-    font-size: 15px;
-    padding: 13px;
+    max-width: calc(100vw - 20px); /* 👈 left-right 10px gap confirm */
+    padding: 28px;
   }
 }
 
 /* 🖥 Desktop */
 @media (min-width: 768px) {
   .card {
-    max-width: 420px;
+    max-width: 460px;
   }
 }
